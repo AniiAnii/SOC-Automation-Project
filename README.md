@@ -1,4 +1,5 @@
-Elastic SIEM Home Lab using Kali Linux
+#Elastic SIEM Home Lab using Kali Linux
+
 This project demonstrates how to set up a basic home lab environment using Elastic SIEM for security event monitoring and Kali Linux as the test environment for generating security events. The lab provides a hands-on opportunity to learn and practice security monitoring, incident detection, and alerting using Elastic's SIEM capabilities.
 
 Overview

@@ -6,14 +6,16 @@ This project demonstrates how to set up a basic home lab environment using Elast
 In this guide, we will:
 
 * Set up an Elastic Cloud account and install Elastic Defend on a Linux system (Kali Linux in this case, but it works on any Linux distribution).
-Use Nmap to simulate network scanning and generate security events.
-Create a dashboard to visualize the events in Elastic.
-Set up an alert to detect Nmap activity.
-Prerequisites
-Elastic Cloud account. You can sign up for a free trial on Elastic Cloud.
-A Linux-based system (preferably Kali Linux).
-Basic knowledge of command-line interface and Linux system administration.
-Step 1: Elastic Defend Installation
+* Use Nmap to simulate network scanning and generate security events.
+* Create a dashboard to visualize the events in Elastic.
+* Set up an alert to detect Nmap activity.
+  
+## Prerequisites
+* **Elastic Cloud** account. You can sign up for a free trial on Elastic Cloud.
+* A Linux-based system (preferably Kali Linux).
+* Basic knowledge of command-line interface and Linux system administration.
+  
+## Step 1: Elastic Defend Installation
 Sign up on Elastic Cloud and set up your Elastic instance.
 
 Install Elastic Defend on your Linux machine. In this project, we used Kali Linux, but the steps apply to any Linux system.

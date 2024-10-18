@@ -66,6 +66,8 @@ To detect and get alerted on Nmap activity:
 2. Create a new rule to detect Nmap activity based on the patterns of the network scans.
 3. Set the alert to trigger whenever an Nmap scan is detected, and visualize the alert data on your dashboard.
 
+![Capture](https://github.com/user-attachments/assets/34b0b0dc-ccb3-46f5-8df0-6b203cf8e218)
+
 ## Conclusion
 
 This project demonstrates the essential steps to create a basic SIEM home lab using Elastic Defend and Kali Linux. By following these steps, you can gain valuable experience in:

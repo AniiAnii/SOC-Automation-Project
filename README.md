@@ -16,18 +16,20 @@ In this guide, we will:
 * Basic knowledge of command-line interface and Linux system administration.
   
 ## Step 1: Elastic Defend Installation
-Sign up on Elastic Cloud and set up your Elastic instance.
 
-Install Elastic Defend on your Linux machine. In this project, we used Kali Linux, but the steps apply to any Linux system.
+1. **Sign up** on Elastic Cloud and set up your Elastic instance.
 
-Execute the following commands to download and install the Elastic Agent:
+2. **Install Elastic Defend** on your Linux machine. In this project, we used Kali Linux, but the steps apply to any Linux system.
 
+     Execute the following commands to download and install the Elastic Agent:
+```
 bash
 Copy code
 curl -L -O https://artifacts.elastic.co/downloads/beats/elastic-agent/elastic-agent-8.15.3-linux-x86_64.tar.gz
 tar xzvf elastic-agent-8.15.3-linux-x86_64.tar.gz
 cd elastic-agent-8.15.3-linux-x86_64
 sudo ./elastic-agent install --url=https://your-fleet-server-url:443 --enrollment-token=your-enrollment-token
+```
 Replace your-fleet-server-url and your-enrollment-token with the appropriate values from your Elastic Cloud Fleet setup.
 
 Once the Elastic Agent is installed, you should start receiving security event data in your Elastic dashboard.

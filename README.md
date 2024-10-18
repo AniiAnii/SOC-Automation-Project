@@ -1,11 +1,11 @@
-#Elastic SIEM Home Lab using Kali Linux
+# Elastic SIEM Home Lab using Kali Linux
 
 This project demonstrates how to set up a basic home lab environment using Elastic SIEM for security event monitoring and Kali Linux as the test environment for generating security events. The lab provides a hands-on opportunity to learn and practice security monitoring, incident detection, and alerting using Elastic's SIEM capabilities.
 
-Overview
+## Overview
 In this guide, we will:
 
-Set up an Elastic Cloud account and install Elastic Defend on a Linux system (Kali Linux in this case, but it works on any Linux distribution).
+*Set up an Elastic Cloud account and install Elastic Defend on a Linux system (Kali Linux in this case, but it works on any Linux distribution).
 Use Nmap to simulate network scanning and generate security events.
 Create a dashboard to visualize the events in Elastic.
 Set up an alert to detect Nmap activity.

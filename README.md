@@ -22,9 +22,9 @@ In this guide, we will:
 2. **Install Elastic Defend** on your Linux machine. In this project, we used Kali Linux, but the steps apply to any Linux system.
 
      Execute the following commands to download and install the Elastic Agent:
+
+bash   
 ```
-bash
-Copy code
 curl -L -O https://artifacts.elastic.co/downloads/beats/elastic-agent/elastic-agent-8.15.3-linux-x86_64.tar.gz
 tar xzvf elastic-agent-8.15.3-linux-x86_64.tar.gz
 cd elastic-agent-8.15.3-linux-x86_64
@@ -32,46 +32,54 @@ sudo ./elastic-agent install --url=https://your-fleet-server-url:443 --enrollmen
 ```
 Replace your-fleet-server-url and your-enrollment-token with the appropriate values from your Elastic Cloud Fleet setup.
 
-Once the Elastic Agent is installed, you should start receiving security event data in your Elastic dashboard.
+3. Once the Elastic Agent is installed, you should start receiving security event data in your Elastic dashboard.
 
-Step 2: Nmap Testing on Kali Linux
-Nmap is a network scanning tool used to identify open ports and services on a network. On Kali Linux, it comes pre-installed. If you are using a different Linux distribution, you can install Nmap using the following command:
+## Step 2: Nmap Testing on Kali Linux
+
+1. **Nmap** is a network scanning tool used to identify open ports and services on a network. On **Kali Linux***, it comes pre-installed. If you are using a different Linux distribution, you can install Nmap using the following command:
 
 bash
-Copy code
+```
 sudo apt-get install nmap
-Run Nmap commands to generate security events:
+```
+2. Run Nmap commands to generate security events:
 
 bash
-Copy code
+```
 nmap -sS localhost
 nmap -sU localhost
+```
 These scans will trigger events in Elastic SIEM, which can be monitored and visualized.
 
-Step 3: Creating a Dashboard to Visualize Events
+## Step 3: Creating a Dashboard to Visualize Events
 Once Elastic Defend is operational and Nmap scans are generating events, follow these steps to create a dashboard:
 
-Go to the Elastic SIEM interface.
-Navigate to Kibana -> Dashboards.
-Create a new dashboard, selecting visualizations to monitor the incoming security events. You can add graphs, tables, and charts based on the data from your Nmap scans.
-Step 4: Setting Up an Nmap Alert
+1. Go to the Elastic SIEM interface.
+2. Navigate to Kibana -> Dashboards.
+3. Create a new dashboard, selecting visualizations to monitor the incoming security events. You can add graphs, tables, and charts based on the data from your Nmap scans.
+
+## Step 4: Setting Up an Nmap Alert
+
 To detect and get alerted on Nmap activity:
 
-In the Elastic SIEM interface, go to Kibana -> Security -> Alerts.
-Create a new rule to detect Nmap activity based on the patterns of the network scans.
-Set the alert to trigger whenever an Nmap scan is detected, and visualize the alert data on your dashboard.
-Conclusion
+1. In the Elastic SIEM interface, go to Kibana -> Security -> Alerts.
+2. Create a new rule to detect Nmap activity based on the patterns of the network scans.
+3. Set the alert to trigger whenever an Nmap scan is detected, and visualize the alert data on your dashboard.
+
+## Conclusion
+
 This project demonstrates the essential steps to create a basic SIEM home lab using Elastic Defend and Kali Linux. By following these steps, you can gain valuable experience in:
 
-Security event monitoring.
-Dashboard creation for visualizing security events.
-Creating alerts to detect network scanning activities.
+* Security event monitoring.
+* Dashboard creation for visualizing security events.
+* Creating alerts to detect network scanning activities.
 This lab provides a foundational environment for developing security analyst skills, including incident response and threat detection using Elastic SIEM.
 
-Next Steps
+## Next Steps
 To extend this lab, consider:
 
-Adding more complex attack simulations using tools like Metasploit.
-Automating alerts and integrating with external systems like TheHive for incident response.
-Experimenting with different types of Beats agents to collect data from multiple sources.
+* Adding more complex attack simulations using tools like Metasploit.
+* Automating alerts and integrating with external systems like TheHive for incident response.
+* Experimenting with different types of Beats agents to collect data from multiple sources.
+***  
 Feel free to adjust the URLs, tokens, and other values based on your actual setup! Let me know if you need further refinements or changes.
